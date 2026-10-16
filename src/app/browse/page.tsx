@@ -30,8 +30,8 @@ function BrowseContent() {
   }, [search, sort]);
 
   return (
-    <main className="p-6">
-      <div className="mb-4 flex items-center justify-between">
+    <main className="p-4 sm:p-6">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-3xl font-bold text-white">
           {search ? `Results for "${search}"` : "Browse Manga"}
         </h1>
