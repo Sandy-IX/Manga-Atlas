@@ -1,20 +1,29 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-white">
-      
-      <section className="flex min-h-[80vh] flex-col items-center justify-center px-6 text-center">
-        
-        <h1 className="text-5xl font-bold">
-          Manga Atlas
-        </h1>
+    <main className="flex flex-1 items-center justify-center">
+      {/* Background layers: fixed to the screen, behind everything */}
+      <div className="fixed inset-0 -z-10 bg-zinc-950">
+        <div
+          className="absolute inset-0 scale-110 bg-cover bg-center blur-2xl"
+          style={{ backgroundImage: "url('/hero.jpg')" }}
+        />
+        <div
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/hero.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
+
+      <section className="flex flex-col items-center px-6 py-10 text-center">
+        <h1 className="text-5xl font-bold text-white">Manga Atlas</h1>
 
         <h2 className="mt-4 text-2xl text-zinc-300">
           Discover your next favorite manga.
         </h2>
 
         <p className="mt-4 max-w-xl text-zinc-400">
-          Explore manga, manhwa, and manhua from different worlds
-          and find your next story to get lost in.
+          Explore manga, manhwa, and manhua from different worlds and find your
+          next story to get lost in.
         </p>
 
         <a
@@ -23,21 +32,7 @@ export default function Home() {
         >
           Browse Manga
         </a>
-
       </section>
-
-      <section className="px-6 py-16 text-center">
-        <h2 className="text-3xl font-bold">
-          Your next story is waiting.
-        </h2>
-
-        <p className="mx-auto mt-4 max-w-2xl text-zinc-400">
-          Manga Atlas brings manga, manhwa, and manhua together
-          so you can discover new stories without jumping between
-          different places.
-        </p>
-      </section>
-
     </main>
   );
 }
