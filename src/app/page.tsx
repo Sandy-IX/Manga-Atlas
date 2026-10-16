@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
       <section className="flex flex-col items-center px-6 py-10 text-center">
-        <h1 className="text-5xl font-bold text-white">Manga Atlas</h1>
+        <h1 className="text-5xl font-bold text-white">Yomiro</h1>
 
         <h2 className="mt-4 text-2xl text-zinc-300">
           Discover your next favorite manga.

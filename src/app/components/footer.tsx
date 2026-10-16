@@ -14,7 +14,7 @@ export default function Footer(){
     </a>
     . Not affiliated with or endorsed by MangaDex.
   </p>
-  <p className="mt-1">© {new Date().getFullYear()} Manga Atlas</p>
+  <p className="mt-1">© {new Date().getFullYear()} Yomiro</p>
 </footer>
     );
 }

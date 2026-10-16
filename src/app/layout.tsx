@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Manga Atlas",
-  description: "Your home for manga ",
+  title: "Yomiro",
+  description: "Discover your next favorite manga, manhwa, and manhua.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
