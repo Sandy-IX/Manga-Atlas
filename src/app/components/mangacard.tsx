@@ -13,7 +13,7 @@ export default function MangaCard({
 
   return (
     <div className="flex w-full flex-col gap-4 rounded-xl border border-zinc-800 bg-zinc-950 p-4 shadow-lg shadow-purple-950/20">
-      <div className="aspect-[2/3] w-full overflow-hidden rounded-lg bg-zinc-800">
+      <div className="aspect-2/3 w-full overflow-hidden rounded-lg bg-zinc-800">
         <img
           src={image}
           alt={name}
