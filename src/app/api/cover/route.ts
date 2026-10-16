@@ -11,7 +11,7 @@ export async function GET(req: NextRequest) {
 
   const res = await fetch(
     `https://uploads.mangadex.org/covers/${id}/${file}.512.jpg`,
-    { headers: { "User-Agent": "MangaAtlas/1.0" } }
+    { headers: { "User-Agent": "Yomiro/1.0" } }
   );
 
   if (!res.ok) return new Response("Not found", { status: 404 });

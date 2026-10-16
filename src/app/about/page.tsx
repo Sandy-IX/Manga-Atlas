@@ -3,10 +3,10 @@ import Link from "next/link";
 export default function About() {
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-12">
-      <h1 className="text-4xl font-bold text-white">About Manga Atlas</h1>
+      <h1 className="text-4xl font-bold text-white">About Yomiro</h1>
 
       <p className="mt-4 text-zinc-400">
-        Manga Atlas is a simple place to discover manga, manhwa, and manhua. Browse
+        Yomiro is a simple place to discover manga, manhwa, and manhua. Browse
         random picks, search by title, and sort by popularity, rating, or recent
         updates to find your next story.
       </p>
@@ -30,7 +30,7 @@ export default function About() {
         >
           MangaDex API
         </a>
-        . Manga Atlas is not affiliated with or endorsed by MangaDex. All titles,
+        . Yomiro is not affiliated with or endorsed by MangaDex. All titles,
         covers, and descriptions belong to their respective owners, and every
         manga links back to its page on{" "}
         <a

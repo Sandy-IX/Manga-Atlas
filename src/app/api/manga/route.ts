@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
   const res = await fetch(`https://api.mangadex.org/manga${req.nextUrl.search}`, {
-    headers: { "User-Agent": "MangaAtlas/1.0" },
+    headers: { "User-Agent": "Yomiro/1.0" },
     cache: "no-store",
   });
 

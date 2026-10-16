@@ -9,7 +9,7 @@ export default function Navbar(){
             <Link href="/">
             <Image
              src = {mascot}
-             alt = "Manga Atlas"
+             alt = "Yomiro"
              className="h-20 w-auto"
              priority
              ></Image></Link>
