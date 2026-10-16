@@ -4,11 +4,13 @@ import { useSearchParams } from "next/navigation";
 import MangaCard from "../components/mangacard";
 import SortBar from "../components/sortbar";
 
-const API = "https://api.mangadex.org/manga?limit=24&includes%5B%5D=cover_art";
+
+const API = "/api/manga?limit=24&includes%5B%5D=cover_art";
 
 function BrowseContent() {
   const params = useSearchParams();
   const search = params.get("q")?.trim() || "";
+  
   const sort = params.get("sort") || (search ? "relevance" : "random");
   const [manga, setManga] = useState<any[]>([]);
 
@@ -16,7 +18,8 @@ function BrowseContent() {
     const random = sort === "random";
     const order = random ? "followedCount" : sort;
     const direction = sort === "title" ? "asc" : "desc";
-    const offset = random ? Math.floor(Math.random() * 3000) : 0;
+    
+    const offset = random ? Math.floor(Math.random() * 2000) : 0;
 
     let url = `${API}&offset=${offset}&order%5B${order}%5D=${direction}`;
     if (search) url += `&title=${encodeURIComponent(search)}`;
@@ -52,7 +55,8 @@ function BrowseContent() {
                 ?.filter((tag: any) => tag.attributes.group === "genre")
                 .map((tag: any) => tag.attributes.name.en) || []
             }
-            image={`https://uploads.mangadex.org/covers/${item.id}/${
+
+            image={`/api/cover?id=${item.id}&file=${
               item.relationships.find((rel: any) => rel.type === "cover_art")
                 ?.attributes?.fileName
             }`}
